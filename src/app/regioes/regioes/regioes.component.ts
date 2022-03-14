@@ -3,11 +3,11 @@ import { Regiao } from '../model/regiao';
 import { RegiaoService } from '../service/regiao.service';
 
 @Component({
-  selector: 'app-incidencias',
-  templateUrl: './incidencias.component.html',
-  styleUrls: ['./incidencias.component.css']
+  selector: 'app-regioes',
+  templateUrl: './regioes.component.html',
+  styleUrls: ['./regioes.component.css']
 })
-export class IncidenciasComponent implements OnInit {
+export class RegioesComponent implements OnInit {
 
   regioes: Regiao[]=[];
 
