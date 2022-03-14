@@ -8,10 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class RegiaoService {
 
-  constructor(private http:HttpClient) { }
+  constructor(
+    
+    private http:HttpClient
+    
+
+    ) { }
 
   listRegioes () : Observable<Regiao[]>{
-    const url ='/assets/regioes.json';
+    const url ='/api/regiao';
     return this.http.get<Regiao[]>(url);
   }
 }
