@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Regiao } from '../model/regiao';
-import { RegiaoService } from '../service/regiao.service';
+import { RegiaoService } from '../service/regioes.service';
 
 @Component({
   selector: 'app-regioes',
@@ -14,7 +14,7 @@ export class RegioesComponent implements OnInit {
   constructor(private regiaoService:RegiaoService) { }
 
   ngOnInit(): void {
-    this.regioes = this.regiaoService.listRegioes();
+    this.regiaoService.listRegioes().subscribe(regioes =>{this.regioes = regioes});
   }
 
 }
